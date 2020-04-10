@@ -30,13 +30,23 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the DOM?
 
+An Object translation of the HTML elements of a webpage
+
 2. What is an event?
 
+An event is an action that occurs on a webpage due to user interaction
+
+Click, mouseover, select, etc are all events
+
 3. What is an event listener?
+An event listener is the action of waiting for events to occur and the command on what to do about them
+
 
 4. Why would we convert a NodeList into an Array?
+To be enable the use of array methods
 
 5. What is a component?
+The blocks of code utilizing JS,CSS, and HTML to build web applications
 
 ### Git Set up
 
