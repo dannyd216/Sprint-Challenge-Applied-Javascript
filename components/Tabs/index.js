@@ -13,7 +13,11 @@ axios.get('https://lambda-times-backend.herokuapp.com/topics')
     .then((response) => {
     
 
-        
+
+    })
+    .catch((error) => {
+    
+        console.log(`THERE IS AN ERROR`)
 })
 
 
