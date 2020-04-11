@@ -27,6 +27,8 @@
 //
 // Use your function to create a card for each of the articles and add the card to the DOM.
 
+
+// CREATE THE ARTICLE FUNCTION USING THE DOM 
 function articleCreator(article) {
 
 
@@ -68,18 +70,37 @@ function articleCreator(article) {
 
     imgContDiv.classList.add('img-container')
 
-    image.src = ''
+    image.src = article.authorPhoto
 
     nameSpan.textContent = `By ${article.authorName}`
 
 
-
+// RETURN THE FULL CARD OR DIV OR CONTAINER
 return articleCard
 
 }
 
-// ADD THE CARD TO THE DOM
+// build handshake bet card-container and articleCont
 const articleCont = document.querySelector('.cards-container')
 
+
+
+// CALL TO AXIOS TO GET INFO
+axios.get("https:lambda-times-backend.herokuapp.com/articles")
+.then((response) => {
+
+    // reach in the data with dot notation each level
+    response.data.articles.javascript.forEach((article) => {
+
+    //     console.log(response.javascript)
+
+     articleCont.appendChild(articleCreator(article))
+    })
+
+})
+    .catch((error) => {
+    
+        console.log(`There is an error  `)
+})
 
 
